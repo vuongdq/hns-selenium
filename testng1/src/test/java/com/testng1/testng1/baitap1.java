@@ -3,18 +3,23 @@ import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 
+// Kiểm tra tiêu đề của trang web
+
 public class baitap1 {
     public static void main(String[] args) {
 
-        //comment the above 2 lines and uncomment below 2 lines to use Chrome
+        // Đoạn này cần nhớ khai bao để kết nối với chrome Driver
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         WebDriver driver = new ChromeDriver();
+
+
 
         String baseUrl = "http://demo.guru99.com/test/newtours/";
         String expectedTitle = "Welcome: Mercury Tours";
         String actualTitle = "";
 
-        // launch Fire fox and direct it to the Base URL
+        // launch Chrome and direct it to the Base URL
+
         driver.get(baseUrl);
 
         // get the actual value of the title
@@ -30,7 +35,7 @@ public class baitap1 {
             System.out.println("Test Failed");
         }
 
-        //close Fire fox
+        //close Chrome
         driver.close();
     }
 
